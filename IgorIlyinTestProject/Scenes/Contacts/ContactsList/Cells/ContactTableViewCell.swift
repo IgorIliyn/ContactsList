@@ -9,6 +9,8 @@ import UIKit
 
 class ContactTableViewCell: UITableViewCell {
 
+    // MARK: - IBOutlets -
+    
     @IBOutlet weak var userAvatarImageView: UIImageView!
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
@@ -18,11 +20,10 @@ class ContactTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureCell(model: ContactsList.Users.ViewModel) {
+        firstNameLabel.text = model.firstName
+        lastNameLabel.text = model.lastName
+        emailLabel.text = model.email
     }
-
 }

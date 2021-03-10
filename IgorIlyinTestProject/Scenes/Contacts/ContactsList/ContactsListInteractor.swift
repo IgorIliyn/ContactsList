@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ContactsListBusinessLogic {
-    
+    func getUsers()
 }
 
 protocol ContactsListDataStore {
@@ -20,7 +20,12 @@ class ContactsListInteractor: ContactsListBusinessLogic, ContactsListDataStore {
     var presenter: ContactsListPresentationLogic?
     var worker: ContactsListWorker?
     
-    // MARK:
+    // MARK: - ContactsListBusinessLogic -
+    func getUsers() {
+        APIManager.shared.loadUsers { users in
+            self.presenter?.handleUsers(response: ContactsList.Users.Response(users: users ?? [UserModel]()))
+        }
+    }
     
     
 }

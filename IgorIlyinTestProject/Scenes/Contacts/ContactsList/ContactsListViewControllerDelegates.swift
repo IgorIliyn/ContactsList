@@ -7,9 +7,28 @@
 
 import UIKit
 
-extension ContactsListViewController {
+extension ContactsListViewController: UITableViewDelegate, UITableViewDataSource {
     
-    // MARK: - Delegates -
+    // MARK: - UITableViewDataSource -
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.contactTableViewCell.identifier, for: indexPath) as! ContactTableViewCell
+        let model = users[indexPath.row]
+        cell.configureCell(model: model)
+        return cell
+    }
+    
+}
+
+extension ContactsListViewController: ContactsListDisplayLogic {
+    
+    func showUsers(model: [ContactsList.Users.ViewModel]) {
+        // Display logic
+        users = model
+        tableView.reloadData()
+    }
 }
 

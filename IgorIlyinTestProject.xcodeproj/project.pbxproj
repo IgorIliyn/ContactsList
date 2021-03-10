@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		78C7ECB825F8B83D00F786A0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7ECB725F8B83D00F786A0 /* R.generated.swift */; };
 		78C7ECBC25F8B8F200F786A0 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7ECBB25F8B8F200F786A0 /* ContactTableViewCell.swift */; };
+		78C7ECBF25F8C61000F786A0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7ECBE25F8C61000F786A0 /* APIManager.swift */; };
+		78C7ECC325F8CB4200F786A0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7ECC225F8CB4200F786A0 /* UserModel.swift */; };
+		78C7ECC825F8D10E00F786A0 /* URLResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7ECC725F8D10E00F786A0 /* URLResponseExtension.swift */; };
 		78C84CF925F8A74D004D326E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C84CF825F8A74D004D326E /* AppDelegate.swift */; };
 		78C84CFB25F8A74D004D326E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C84CFA25F8A74D004D326E /* SceneDelegate.swift */; };
 		78C84D0225F8A750004D326E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C84D0125F8A750004D326E /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		73C4659B20F6917F66A88163 /* Pods-IgorIlyinTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IgorIlyinTestProject.release.xcconfig"; path = "Target Support Files/Pods-IgorIlyinTestProject/Pods-IgorIlyinTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		78C7ECB725F8B83D00F786A0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		78C7ECBB25F8B8F200F786A0 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		78C7ECBE25F8C61000F786A0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		78C7ECC225F8CB4200F786A0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		78C7ECC725F8D10E00F786A0 /* URLResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponseExtension.swift; sourceTree = "<group>"; };
 		78C84CF525F8A74D004D326E /* IgorIlyinTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgorIlyinTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C84CF825F8A74D004D326E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C84CFA25F8A74D004D326E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +86,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		78C7ECC125F8C98B00F786A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78C7ECC225F8CB4200F786A0 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78C7ECC625F8D0EE00F786A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78C7ECC725F8D10E00F786A0 /* URLResponseExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		78C84CEC25F8A74D004D326E = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +123,8 @@
 		78C84CF725F8A74D004D326E /* IgorIlyinTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				78C7ECC625F8D0EE00F786A0 /* Extensions */,
+				78C7ECC125F8C98B00F786A0 /* Models */,
 				78C84D0F25F8A8ED004D326E /* App */,
 				78C84D0E25F8A8B2004D326E /* Managers */,
 				78C84D1025F8A909004D326E /* Resources */,
@@ -120,6 +144,7 @@
 		78C84D0E25F8A8B2004D326E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				78C7ECBE25F8C61000F786A0 /* APIManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -335,7 +360,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				78C84D2E25F8AB0F004D326E /* ContactDetailsPresenter.swift in Sources */,
+				78C7ECBF25F8C61000F786A0 /* APIManager.swift in Sources */,
 				78C84D2225F8AA0E004D326E /* ContactsListViewControllerDelegates.swift in Sources */,
+				78C7ECC825F8D10E00F786A0 /* URLResponseExtension.swift in Sources */,
 				78C84D3125F8AB0F004D326E /* ContactDetailsModels.swift in Sources */,
 				78C84D3325F8AB0F004D326E /* ContactDetailsInteractor.swift in Sources */,
 				78C84D1D25F8AA0E004D326E /* ContactsListWorker.swift in Sources */,
@@ -351,6 +378,7 @@
 				78C84D3025F8AB0F004D326E /* ContactDetailsRouter.swift in Sources */,
 				78C84D2F25F8AB0F004D326E /* ContactDetailsWorker.swift in Sources */,
 				78C84D1C25F8AA0E004D326E /* ContactsListPresenter.swift in Sources */,
+				78C7ECC325F8CB4200F786A0 /* UserModel.swift in Sources */,
 				78C84CFB25F8A74D004D326E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

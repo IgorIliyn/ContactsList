@@ -11,20 +11,15 @@ enum ContactsList {
     
     // MARK: Use cases
     
-    enum Something {
-        
-        struct Request {
-            
-        }
-        
+    enum Users {
         struct Response {
-            
+            let users: [UserModel]
         }
         
         struct ViewModel {
-            
+            let firstName: String
+            let lastName: String
+            let email: String
         }
-        
     }
-    
 }
